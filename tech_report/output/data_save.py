@@ -19,7 +19,7 @@ def save_to_markdown(posts_with_reports: List[DataFetchFormatter]):
     md_content = f"""---
 title: "极客战地快报：{today_str}"
 excerpt: "极客战地快报摘录"
-coverImage: "/assets/blog/hello-world/cover.jpg"
+coverImage: null
 date: "{date_str}"
 author:
   name: Tim Neutkens
