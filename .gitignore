@@ -49,3 +49,7 @@ _posts
 logs
 
 run_local.sh
+
+blog-starter-app/
+pnpm-lock.yaml
+_posts/*.md
