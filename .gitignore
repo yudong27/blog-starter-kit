@@ -38,3 +38,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+__pycache__
+*.pyc
+
+# 其他不需要跟踪的文件
+# 例如，日志文件、临时文件等
+*.log
+*.tmp
+_posts
+logs
+
+run_local.sh
