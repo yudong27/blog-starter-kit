@@ -9,7 +9,7 @@ def save_to_markdown(posts_with_reports: List[DataFetchFormatter]):
     
     # 获取今天的日期，格式如：2026-02-24
     today_str = datetime.datetime.now().strftime("%Y-%m-%d")
-    
+    date_str = datetime.datetime.now().strftime("%Y-%m-%dT%H:%M:%S.%fZ")
     # 确保保存文章的文件夹存在（假设我们存放在 _posts 目录下）
     os.makedirs("_posts", exist_ok=True)
     
@@ -18,9 +18,14 @@ def save_to_markdown(posts_with_reports: List[DataFetchFormatter]):
     # Markdown 文件的头部元数据 (Frontmatter)，Vercel 模板靠它来识别标题和日期
     md_content = f"""---
 title: "极客战地快报：{today_str}"
-date: "{today_str}"
-description: "今日 AI 前沿与极客黑话解析"
-tags: ["Daily Report", "AI", "Tech"]
+excerpt: "极客战地快报摘录"
+coverImage: "/assets/blog/hello-world/cover.jpg"
+date: "{date_str}"
+author:
+  name: Tim Neutkens
+  picture: "/assets/blog/authors/tim.jpeg"
+ogImage:
+  url: "/assets/blog/hello-world/cover.jpg"
 ---
 
 # 🚀 {today_str} 极客战地快报
